@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Agcloud</title>
+  <title>Ag Cloud</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="topbar">
+		<%= image_tag "cloudlogo.svg" %>
+		<span class="agcloud">Ag Cloud</span>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#"><span class="flaticon-menu25" id="dashicon"></span><br> Dashboard</a></li>
+			<li><a href="#"><span class="flaticon-keyboard9" id="appsicon"></span><br>Apps</a></li>
+			<li><a href="#"><span class="flaticon-people5" id="farmicon"></span> <br>Farm</a></li>
+			<li><a href="#"><span class="flaticon-user13" id="usericon"></span><br> User</a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><span class="flaticon-outcoming" id="logouticon"></span><br> Logout</a></li>
+		</ul>
+	</nav>
 
-<%= yield %>
+	<div class="yield">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

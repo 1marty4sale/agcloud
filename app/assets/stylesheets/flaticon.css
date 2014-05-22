@@ -1,0 +1,82 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+       /* font-size: 50px;*/
+font-style: normal;
+margin-left: 0px;
+}.flaticon-add11:before {
+	content: "\e000";
+}
+.flaticon-add70:before {
+	content: "\e001";
+}
+.flaticon-add98:before {
+	content: "\e002";
+}
+.flaticon-ascendant6:before {
+	content: "\e003";
+}
+.flaticon-calendar68:before {
+	content: "\e004";
+}
+.flaticon-coins15:before {
+	content: "\e005";
+}
+.flaticon-diary1:before {
+	content: "\e006";
+}
+.flaticon-door9:before {
+	content: "\e007";
+}
+.flaticon-history1:before {
+	content: "\e008";
+}
+.flaticon-keyboard9:before {
+	content: "\e009";
+}
+.flaticon-machine2:before {
+	content: "\e00a";
+}
+.flaticon-map46:before {
+	content: "\e00b";
+}
+.flaticon-map49:before {
+	content: "\e00c";
+}
+.flaticon-menu10:before {
+	content: "\e00d";
+}
+.flaticon-menu25:before {
+	content: "\e00e";
+}
+.flaticon-outcoming:before {
+	content: "\e00f";
+}
+.flaticon-people5:before {
+	content: "\e010";
+}
+.flaticon-placeholder8:before {
+	content: "\e011";
+}
+.flaticon-share4:before {
+	content: "\e012";
+}
+.flaticon-todo:before {
+	content: "\e013";
+}
+.flaticon-user13:before {
+	content: "\e014";
+}
+.flaticon-x10:before {
+	content: "\e015";
+}

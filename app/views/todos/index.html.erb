@@ -1,27 +1,31 @@
-<h1>Listing todos</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Content</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="col span_8 tasks">
 
-<% @todos.each do |todo| %>
-  <tr>
-    <td><%= todo.name %></td>
-    <td><%= todo.content %></td>
-    <td><%= todo.status %></td>
-    <td><%= link_to 'Show', todo %></td>
-    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <h1>All Tasks</h1>
+    <div>
+      <div class="col span_1"><h4>Done</h4></div>
+      <div class="col span_5"><h4>Task</h4></div>
+      <div class="col span_1"><h4>Name</h4></div>
+      <div class="col span_5"><h4>Date</h4></div>
+    </div>
+    <% @todos.each do |todo| %>
+      <div class="taskitem">
+        <div class="col span_1"><%= todo.status %></div>
+        <div class="col span_5"><%= todo.content %></div>
+        <div class="col span_1"><%= todo.name %></div>
+        <div class="col span_2">
+        <span><%= link_to time_ago_in_words(todo.created_at) + " ago", todo %></span></div>
+        <div class="col span_3 todooptions">
+        <span class="button small"><%= link_to 'More', todo %></span>
+        <span class="button small admin"><%= link_to 'Edit', edit_todo_path(todo) %></span>
+        <span class="button small admin"><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></span></div>
+      </div>
+      <% end %>
+      <br />
 
-<br />
+      <div class="button" id="newtask"><%= link_to 'New Task', new_todo_path %></div>
+    </div>
 
-<%= link_to 'New Todo', new_todo_path %>
+
+
+
