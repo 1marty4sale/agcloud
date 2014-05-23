@@ -22,7 +22,12 @@
 			<li><a href="#"><span class="flaticon-outcoming" id="logouticon"></span><br> Logout</a></li>
 		</ul>
 	</nav>
-
+    <% flash.each do |type, message| %>
+      <div class="alert <%= flash_class type %>">
+        <button class="close" data-dismiss="alert">x</button>
+        <%= message %>
+      </div>
+    <% end %>
 	<div class="yield">
 		<%= yield %>
 	</div>
