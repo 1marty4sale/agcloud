@@ -12,6 +12,7 @@
  *= require_tree .
  */
 
+/* Font */
 @font-face {
     font-family: 'regencielight';
     src: url('regencielight-webfont.eot');
@@ -24,7 +25,7 @@
 
 }
 
-
+/* Body */
 html {
 	background: #CCCCCC;
 	font-family: "regencielight";
@@ -33,29 +34,27 @@ html {
   	-moz-osx-font-smoothing: grayscale;
 } 
 
-nav {
-	background: #666666;
-	position: fixed;
-	width: 120px;
-	height: 100%;
-	display: relative;
-	left: 0;
-	top: 0;
-
+.div {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	display: inline-block;
 }
 
-
-nav li a {
-	text-decoration: none;
-	color: #999999;
-	font-size: 20px;
+ul {
+	margin: 0;
 }
 
-nav li {
+li {
+	display: inline;
 	list-style-type: none;
-	text-align: center;
-	margin-left: -20px;
 }
+
+li a {
+	text-decoration: none;
+}
+
+
 
 .topbar {
 	background: #9CC763;
@@ -77,37 +76,96 @@ nav li {
 	top: 4px;
 }
 
+.top-right {
+	position: absolute;
+	right: 0;
+	top: 4px;
+	display: inline-block;
+}
+
+.top-left {
+	display: inline;
+}
 
 .yield {
 	margin-left: 140px;
 }
 
+.topbar a {
+	color: white;
+	font-size: 20px;
+}
 
+.top-right li {
+	padding-right: 30px;
+}
+
+
+nav {
+	background: #666666;
+	position: fixed;
+	width: 120px;
+	height: 100%;
+	display: relative;
+	left: 0;
+	top: 0;
+
+}
+
+
+nav li a {
+	color: #999999;
+	font-size: 20px;
+	padding-top: 20px;
+	display: inline-block;
+	position: relative;
+
+}
+
+nav li {
+	text-align: center;
+	margin-left: -20px;
+}
 
 #dashicon {
 	font-size: 50px;
+	display: relative;
+	margin-left: -20px;
 }
 
 #appsicon {
 	font-size: 80px;
 	position: relative;
 	left:0;
-	margin-left: -20px;
+	margin-left: 0px;
 }
 
 #farmicon {
 	font-size: 80px;
 	margin-bottom: -20px;
 	padding-bottom: -20px;
+	margin-left: 10px;
 }
+
+#farmword {
+	margin-top: -20px;
+}
+
 #usericon {
 	font-size: 50px;
+	margin-left: 10px;
 }
 #logouticon {
 	font-size: 60px;
+	margin-left: 10px;
 }
 
-.button {
+
+input[type="submit"], button, .btn {
+	border: 0;
+}
+
+input[type="submit"], button, .btn, .button {
 	background-color: #9CC763;
 	padding: 10px;
 	border-radius: 10px;
@@ -115,7 +173,38 @@ nav li {
 	
 }
 
-.button a {
+input[type="submit"], button, .btn, .button a {
 	text-decoration: none;
 	color: white;
 }
+
+/* Forms */
+.form_horizontal {
+	display: inline-block;
+}
+
+.signin {
+	text-align: center;
+	padding: 200px 0;
+}
+.signin h2 {
+	padding: 15%;
+}
+
+.form-input {
+	padding: 20px;
+}
+
+.boolean-label {
+	padding: 20px;
+}
+
+.email-label {
+	padding-right: 53px;
+}
+
+.password-label {
+	padding-right: 20px;
+}
+
+/* Front Page */

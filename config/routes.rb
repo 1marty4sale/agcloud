@@ -1,8 +1,20 @@
 Agcloud::Application.routes.draw do
-  devise_for :users
+ 
+ devise_for :users
 
-  resources :todos
-  root to: 'todos#index'
+devise_scope :user do
+  get 'register', to: 'devise/registrations#new'
+end
+
+
+
+ resources :welcome
+  root to: 'welcome#index'
+
+   resources :todos
+ root to: 'todos#index'
+
+
 
 
   # The priority is based upon order of creation:

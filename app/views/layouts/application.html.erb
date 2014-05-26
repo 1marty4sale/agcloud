@@ -8,29 +8,37 @@
 </head>
 <body>
 	<div class="topbar">
-		<%= image_tag "cloudlogo.svg" %>
-		<span class="agcloud">Ag Cloud</span>
+		<div class="top-left">
+			<ul >
+				<li><%= image_tag "cloudlogo.svg" %></li>
+				<li><span class="agcloud">Ag Cloud</span></li>
+			</ul>
+		</div>
+		<div class="top-right">
+			<ul >
+				<% if user_signed_in? %>
+					<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+					<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to "Register", new_user_registration_path %></li>
+					<li><%= link_to "Log in", new_user_session_path %></li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 	<nav>
 		<ul>
 			<li><a href="#"><span class="flaticon-menu25" id="dashicon"></span><br> Dashboard</a></li>
 			<li><a href="#"><span class="flaticon-keyboard9" id="appsicon"></span><br>Apps</a></li>
-			<li><a href="#"><span class="flaticon-people5" id="farmicon"></span> <br>Farm</a></li>
+			<li><a href="#"><span class="flaticon-people5" id="farmicon"></span> <br><span id="farmword">Farm</span></a></li>
 			<li><a href="#"><span class="flaticon-user13" id="usericon"></span><br> User</a></li>
 		</ul>
 		<ul>
 			<li><a href="#"><span class="flaticon-outcoming" id="logouticon"></span><br> Logout</a></li>
 		</ul>
 	</nav>
-    <% flash.each do |type, message| %>
-      <div class="alert <%= flash_class type %>">
-        <button class="close" data-dismiss="alert">x</button>
-        <%= message %>
-      </div>
-    <% end %>
 	<div class="yield">
 		<%= yield %>
 	</div>
-
 </body>
 </html>

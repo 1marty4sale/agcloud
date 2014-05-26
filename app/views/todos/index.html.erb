@@ -1,18 +1,18 @@
 
-  <div class="col span_8 tasks">
+  <div class="col span_8 div">
 
     <h1>All Tasks</h1>
     <div>
       <div class="col span_1"><h4>Done</h4></div>
-      <div class="col span_5"><h4>Task</h4></div>
+      <div class="col span_4"><h4>Task</h4></div>
       <div class="col span_1"><h4>Name</h4></div>
       <div class="col span_5"><h4>Date</h4></div>
     </div>
     <% @todos.each do |todo| %>
       <div class="taskitem">
         <div class="col span_1"><%= todo.status %></div>
-        <div class="col span_5"><%= todo.content %></div>
-        <div class="col span_1"><%= todo.name %></div>
+        <div class="col span_4"><%= todo.content %></div>
+        <div class="col span_1"><%= todo.user.full_name %></div>
         <div class="col span_2">
         <span><%= link_to time_ago_in_words(todo.created_at) + " ago", todo %></span></div>
         <div class="col span_3 todooptions">
